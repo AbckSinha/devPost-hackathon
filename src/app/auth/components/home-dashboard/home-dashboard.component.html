@@ -1,0 +1,37 @@
+<div class="app-card" [ngStyle]="{'min-height.px':appHeight}">
+  <div class="card-body">
+    <h5 class="card-title user-name">Hi, User12345</h5>
+    <p class="card-text">What would you like to do today?</p>
+
+    <div class="row">
+      <div class="card dashboard-card card-apply">
+        <div class="card-body dashboard-card-body">
+          <div class="sub-card-img card-apply-img"></div>
+          <!-- <img class="sub-card-apply" src="{{imgBasePath}}apply_icon.png" alt="Apply Finance Image"> -->
+          <h5 class="sub-card-title _mt-10">Apply</h5>
+          <p class="sub-card-text">Submit Application</p>
+        </div>
+      </div>
+
+      <div class="card dashboard-card card-track">
+        <div class="card-body dashboard-card-body">
+          <div class="sub-card-img card-track-img"></div>
+          <!-- <img class="sub-card-track" src="{{imgBasePath}}track_icon.png" alt="Track Application Image"> -->
+          <h5 class="sub-card-title _mt-10">Track</h5>
+          <p class="sub-card-text">Edit / Track Application</p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="card dashboard-card card-video" (click)="tutorials()">
+      <div class="card-body dashboard-card-body">
+        <div class="sub-card-img card-video-img"></div>
+        <!-- <img class="sub-card-setting" src="{{imgBasePath}}settings_icon.png" alt="Settings Image"> -->
+        <h5 class="sub-card-title _mt-10">Tutorials</h5>
+        <p class="sub-card-text">Watch Video Tutorials</p>
+      </div>
+    </div>
+  </div>
+</div>

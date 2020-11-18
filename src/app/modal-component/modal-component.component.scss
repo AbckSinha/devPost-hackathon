@@ -1,0 +1,44 @@
+.header-bg {
+    height: 50vh;
+    background-image: url("../../assets/images/home_bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 55%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+#header-text{
+    font-size: 19px;
+    color: #fff;
+}
+.back-arrow {
+    z-index: 1;
+}
+.modal-header {
+    padding:0;
+}
+.modal-content{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border: none;
+    border-radius: 0;
+    overflow: hidden;
+    background-color: #fff;
+}
+.head {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh; 
+}
+.modal-dialog{
+    height: 100%;
+}
+
+.tnc-text {
+    text-align: justify;
+}

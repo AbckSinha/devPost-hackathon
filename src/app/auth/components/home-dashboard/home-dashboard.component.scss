@@ -1,0 +1,185 @@
+$white-color: #FFFFFF;
+$sub-card-title: #3879C7;
+$black-color: #000000;
+
+#header-text{
+  font-size: 19px;
+  color:$white-color;
+  text-align: center;
+  margin-top:5px
+}
+
+.card-title{
+  font-size: 20px;
+  font-weight: bold;
+  &.user-name{
+    font-size: 16px;
+  }
+}
+
+.card-text{
+  font-size: 16px;
+}
+
+.home-image {
+  height: 50vh;
+  background-image: url("../../../../assets/images/home_bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 55%;
+  position: relative;
+  top: -10px;
+}
+
+.header-img{
+  height: 47px;
+  width: 53px;
+  background: #cf1d21;
+  position: fixed;
+  top: 10px;
+}
+
+#notification{
+  right: 50px;
+}
+
+#logout {
+  right: 3px;
+}
+
+// .sub-card-img{
+//   height: 48%;
+//   width: 52%;
+//   /* margin-bottom: 5px; */
+// }
+.ml{
+  margin-left: auto;
+}
+.sub-card-title{
+  font-size: 15px;
+  color:$black-color;
+  font-weight: bold;
+  line-height: 17px;
+}
+
+.sub-card-text{
+  font-size: 10px;
+  line-height: 13px;
+  color: gray;
+  text-align: left;
+}
+
+.card{
+  // box-shadow: 2px 2px 5px #dadada;
+  border: none;
+  border-radius: 0;
+  width: 43%;
+  margin: 3%;
+  display: inline-block;
+}
+
+.sales-img{
+  width: 60%;
+  margin-left: 0px;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+
+.dashboard-card:hover {
+  box-shadow: 2px 2px 5px #999999;
+  background-color: rgb(236, 29, 35);
+  height: 165px;
+  border-radius: 5px;
+}
+
+.dashboard-card:hover .sub-card-text {
+  font-size: 11px;
+  line-height: 13px;
+  color: #fff;
+  text-align: left;
+}
+
+.dashboard-card:hover .sub-card-title {
+  font-size: 17px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 14px;
+}
+
+.dashboard-card {
+  box-shadow: 2px 2px 5px #999999;
+  background: $white-color;
+  height: 165px;
+  border-radius: 5px;
+}
+
+.dashboard-card-body {
+  padding: 0.5rem 1.25rem;
+}
+
+// .sub-card-apply {
+//   height: 30%;
+//   width: 30%;
+//   margin-top: 55px;
+// }
+// .sub-card-track {
+//   height: 30%;
+//   width: 30%;
+//   margin-top: 42px;
+// }
+// .sub-card-manage {
+//   height: 38%;
+//   width: 38%;
+//   margin-top: 47px;
+// }
+// .sub-card-setting {
+//   height: 30%;
+//   width: 30%;
+//   margin-top: 55px;
+// }
+.sub-card-img {
+  height: 40px;
+  margin-top: 40px;
+  background-repeat: no-repeat;
+  background-size: 40px;
+}
+.card-apply-img {
+  background-image: url("../../../../assets/images/apply_icon.png");
+}
+.card-track-img{
+  background-image: url("../../../../assets/images/track_icon.png");
+}
+.card-manage-img {
+  background-image: url("../../../../assets/images/sales_icon.png");
+}
+.card-settings-img {
+  background-image: url("../../../../assets/images/settings_icon.png");
+}
+.card-video-img {
+  background-image: url("../../../../assets/images/Tutorials2.png");
+}
+
+.card-apply:hover, .card-apply:focus{
+  .card-apply-img {
+    background-image: url("../../../../assets/images/apply_icon_white.png");
+  }
+}
+.card-track:hover, .card-track:focus {
+  .card-track-img {
+    background-image: url("../../../../assets/images/track_icon_white.png");
+  }
+}
+.card-manage:hover, .card-manage:focus{
+  .card-manage-img {
+    background-image: url("../../../../assets/images/sales_icon_white.png");
+  }
+}
+.card-settings:hover, .card-settings:focus {
+  .card-settings-img {
+    background-image: url("../../../../assets/images/settings_icon_white.png");
+  }
+}
+.card-video:hover, .card-video:focus {
+  .card-video-img {
+    background-image: url("../../../../assets/images/TutorialsNEW.png");
+  }
+}

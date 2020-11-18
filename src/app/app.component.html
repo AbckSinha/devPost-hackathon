@@ -1,0 +1,5 @@
+<router-outlet>
+     <app-header *ngIf="!headerOption"></app-header>
+     <app-header-options *ngIf="headerOption"></app-header-options>
+     <app-loading *ngIf="loading"></app-loading>
+</router-outlet>

@@ -1,0 +1,18 @@
+<img src="{{imgBasePath}}back_arrow.png" alt="back_arrow" class="back-arrow float-left" (click)="goBack()">
+<div class="app-card" style="overflow-y: scroll;" [ngStyle]="{'min-height.px':appHeight}">
+
+  <div *ngIf="userRole === 'SALESPERSON'">
+    <div class="video-list" *ngFor="let salesVideo of salespersonVideoLists; index as i">  
+      <!-- [ngClass]="{'selected-option' : selectFlag == i}" -->
+      <div class="video-details row">
+        <div class="video-label col-sm-9 col-md-9 col-9">{{salesVideo.label}}</div>
+        <div class="video-button col-sm-3 col-md-3 col-3">
+          <button id="play" class=" play-button" (click)="viewVideo(salesVideo)">
+            <img src="{{imgBasePath}}Play2.png" alt="play-icon" class="play-icon">
+            Play</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

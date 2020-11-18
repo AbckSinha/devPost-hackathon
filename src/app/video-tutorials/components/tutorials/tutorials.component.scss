@@ -1,0 +1,55 @@
+@import "../../../../assets/scss/variable";
+
+
+.video-list {
+    padding: 0px;
+    width: 96%;
+    box-shadow: 3px 3px 4px $appCard-boxshadow-color;
+    position: relative;
+    margin: 17px 2%;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+}
+.video-list h5 {
+    font-weight: 900;
+}
+.video-list p {
+    font-size: 16px;
+}
+.video-details {
+    width: 100%;
+    padding: 10px;
+    border-radius: 2px;
+    word-wrap: break-word;
+    margin: 0px !important;
+}
+.video-button {
+    padding: 2px 0px;
+    font-size: 14px;
+}
+.play-button {
+    height: 32px;
+    font-size: 13px;
+    display: flex;
+    margin: 0px;
+    border-radius: 5px;
+    align-items: center;
+}
+.selected-option {
+    background: $application-hover-color;
+    color: $white-color;
+}
+.video-label {
+    align-items: center;
+    display: flex;
+    padding: 0px;
+    font-size: 12px;
+}
+.play-icon {
+    margin-left: 15px;
+    margin-right: 5px;
+    height: 16px;
+}
+@media (min-width: 400px) and (max-width: 420px) {
+    
+  }

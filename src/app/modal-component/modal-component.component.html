@@ -1,0 +1,23 @@
+<img src="{{imgBasePath}}back_arrow.png" alt="back_arrow" class="back-arrow float-left" (click)="goBack()">
+<div class="head">
+  <div class="header-bg">
+    <div class="col-sm-12 col-md-12">
+      <div class=" _mt-20">
+        <p id="header-text" class="text-center">{{title}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="app-card tnc-text" [ngStyle]="{'position':appPosition}">
+  <div class="container _mt-20">
+    <h5>{{title}}</h5>
+    <ng-container>
+     <div>Need to fill</div>
+    </ng-container>
+    <!-- <div [innerHtml]="content"></div> -->
+  </div>
+
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-success" (click)="activeModal.close('Close click')">OK</button>
+</div>

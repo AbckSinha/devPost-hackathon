@@ -1,0 +1,48 @@
+<div class="backgroundImage">
+
+
+  <div>
+    <img src="{{imgBasePath}}settlement.png" alt="" class="login-logo">
+  </div>
+  <div class="login-container">
+    <div class="login-form _ml-30 _mr-30">
+      <div *ngIf='SessionExpired' class="red-alert"> Your session has expired. </div>
+      <!-- <div class="login-header _mt-10"> CIMB </div>
+    <div class="login-subheader _mt-10"> Auto Finance Solution </div> -->
+
+      <form class="login-container-form _mt-20" [formGroup]="loginForm">
+        <div class="form-group input-group _mt-10">
+          <input type="text" placeholder="User ID" formControlName="userName" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && formData.userName.errors }" maxlength="32" />
+          <div *ngIf="submitted && formData.userName.errors" class="invalid-feedback">
+            <div *ngIf="formData.userName.errors.required">Enter User ID.</div>
+          </div>
+        </div>
+        <div class="form-group input-group _mt-10">
+          <input type="password" placeholder="Password" formControlName="password" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && formData.password.errors }" maxlength="20" />
+
+          <img *ngIf="touchId" id="finger-img" src="{{imgBasePath}}fingerprint.svg" alt="finger Image"
+            (click)="allowFingerFaceprint()">
+
+          <img *ngIf="faceId" id="face-img" src="{{imgBasePath}}face_id.svg" alt="face Image"
+            (click)="allowFingerFaceprint()">
+
+          <div *ngIf="submitted && formData.password.errors" class="invalid-feedback">
+            <div *ngIf="formData.password.errors.required">Enter Password.</div>
+          </div>
+        </div>
+        <div class="_mt-10 clearfix">
+          <a routerLink="" (click)="forgotPassword()" class="forgot-link">Forgot Password?</a>
+        </div>
+
+        <div class="_mt-10">
+          <button class="btn-login _mb-0" (click)="onSubmit(loginForm.value)">Login</button>
+          <button class="btn-secondary" (click)="redirectToRegister()">Register</button>
+        </div>
+      </form>
+      <footer>Version 1.0.0</footer>
+    </div>
+  </div>
+
+</div>
