@@ -1,0 +1,121 @@
+<img src="{{imgBasePath}}back_arrow.png" alt="back_arrow" class="back-arrow float-left" (click)="goBack()">
+<div class="app-card">
+  <div #content>
+    <div class="form-parent">
+      <div class="container">
+        <div class="_pl-0 _pt-20 col-md-8 col-sm-8 text-left">
+          <h5 class="open-sans-semibold">CIMB Auto Dealer Account</h5>
+          <p class="font-14">
+            Fill in your details
+          </p>
+        </div>
+        <form [formGroup]="registerForm" [ngStyle]="{'height.px': formHeight, 'overflow-y':overflow}"
+          autocomplete="off">
+          <div class="form-group">
+            <div class="form-group float-left">
+              <input type="text" id="countryCode" class="form-control" placeholder="+60" [value]="countrycode" readonly
+                [ngClass]="{ 'is-invalid': submitted && formData.mobileNumber.errors }" />
+            </div>
+            <div class="form-group col-sm-8 col-md-8 tel">
+              <span class="has-float-label">
+                <input #mobileNo type="tel" formControlName="mobileNumber" id="telNo" class="form-control"
+                  placeholder="Mobile Number" maxlength="10" minlength="9"
+                  [ngClass]="{ 'is-invalid': submitted && formData.mobileNumber.errors }" />
+                <label for="telNo" class="required">Mobile Number</label>
+                <div *ngIf="submitted && formData.mobileNumber.errors" class="form-control"
+                  class="invalid-feedback left-err-msg">
+                  <div *ngIf="formData.mobileNumber.errors.required">
+                    Enter Mobile Number.
+                  </div>
+                  <div *ngIf="formData.mobileNumber.errors.minlength || formData.mobileNumber.errors.maxlength">
+                    Mobile number must be 8 – 10 numerical character.
+                  </div>
+                  <!-- <div *ngIf="formData.mobileNumber.errors.maxlength">Mobile number must be 8 – 10 numerical character.
+                  </div> -->
+                  <div *ngIf="formData.mobileNumber.errors.pattern">Enter valid mobile number.</div>
+                </div>
+              </span>
+            </div>
+          </div>
+          <div class="form-group input-group _pt-10 col-sm-8 col-md-8">
+            <span class="has-float-label">
+              <input type="text" formControlName="userName" id="userName" class="form-control"
+                placeholder="Create User ID" maxlength="32" minlength="8"
+                [ngClass]="{ 'is-invalid': submitted && formData.userName.errors }" />
+              <label for="userName" class="required">Create User ID</label>
+              <!-- <small id="userName" class="form-text msg">Create User ID</small> -->
+              <div *ngIf="submitted && formData.userName.errors" class="invalid-feedback">
+                <div *ngIf="formData.userName.errors.required">Enter User ID.</div>
+                <div *ngIf="formData.userName.errors.minlength || formData.userName.errors.maxlength">
+                  User ID must be 8 to 32 characters.
+                </div>
+                <!-- <div *ngIf="formData.userName.errors.maxlength">User ID must be 8 to 32 characters.</div> -->
+                <div *ngIf="formData.userName.errors.pattern">User ID must contain at least 1 alphabet.</div>
+              </div>
+            </span>
+          </div>
+          <div class="form-group input-group col-sm-8 col-md-8">
+            <span class="has-float-label">
+              <input type="password" formControlName="password" id="createPassword" class="form-control"
+                placeholder="Create Password" maxlength="20" minlength="8"
+                [ngClass]="{ 'is-invalid': submitted && formData.password.errors }" aria-describedby="passwordHelp" />
+              <label for="createPassword" class="required">Create Password</label>
+              <!-- <small id="passwordHelp" class="form-text msg">Enter 6-digit alphanumeric password</small> -->
+
+              <div *ngIf="submitted && formData.password.errors" class="invalid-feedback">
+                <div *ngIf="formData.password.errors.required">Enter password.</div>
+                <div
+                  *ngIf="formData.password.errors.minlength || formData.password.errors.pattern || formData.password.errors.key || formData.password.errors.userNameMatch">
+                  Enter 8-20 alphanumeric characters combination of special character, not same as User ID.
+                </div>
+                <!-- <div *ngIf="(formData.password.errors.pattern || formData.password.errors.key)">
+                  Enter 8-20 alphanumeric characters, with at least one special character, combination of upper and
+                  lower case letters, not same as User ID and not containing 3 consecutive characters (eg. Abc or 123).
+                </div>
+                <div *ngIf="formData.password.errors.userNameMatch">
+                  Enter 8-20 alphanumeric characters, with at least one special character, combination of upper and
+                  lower case letters, not same as User ID and not containing 3 consecutive characters (eg. Abc or 123).
+                </div> -->
+              </div>
+            </span>
+          </div>
+
+          <div class="form-group input-group _pb-20 col-sm-8 col-md-8">
+            <span class="has-float-label">
+              <input type="password" formControlName="confirmPassword" id="confirmPassword" class="form-control"
+                aria-describedby="confirmPasswordHelp" placeholder="Re-enter Password"
+                [ngClass]="{ 'is-invalid': submitted && formData.confirmPassword.errors }" />
+              <label for="confirmPassword" class="required">Re-enter Password</label>
+              <!-- <small id="confirmPasswordHelp" class="form-text msg">Retype the same password for confirmation</small> -->
+              <div *ngIf="submitted && formData.confirmPassword.errors" class="invalid-feedback">
+                <div *ngIf="formData.confirmPassword.errors.required">
+                  Re-enter your password here.
+                </div>
+                <div *ngIf="formData.confirmPassword.errors.mustMatch">
+                  Password does not match.
+                </div>
+              </div>
+            </span>
+          </div>
+          <div class="form-group col-sm-8 col-md-8">
+            <div class="terms-and-conditions">I agree to the <span class="terms" (click)="openTerms();">Terms &
+                Conditions and Privacy Policy</span></div>
+            <label class="radio-container">
+              <input type="checkbox" id="checkbox" value="" class="form-check-input" formControlName="agreementCheck"
+                required />
+              <span class="checkmark"></span>
+            </label>
+            <div *ngIf="submitted && !formData.agreementCheck.value" class="invalid-feedback-select">
+              Please agree to the Terms & Conditions and Privacy Policy to proceed with submission.
+            </div>
+          </div>
+          <div class="button-wrapper" #buttonWrapper>
+            <button type="submit" (click)="continue(registerForm.value)">
+              Proceed
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

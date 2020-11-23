@@ -1,0 +1,14 @@
+<div class="app-card" [ngStyle]="{'min-height.px':appHeight}">
+    <div class="card-body">
+      <div class="col-sm-12 col-md-12 successCenter">
+        <img class="otp-image" src="{{imgBasePath}}success.svg" alt="Success Image">
+      </div>
+      <h5 class="card-title">{{message}}</h5>
+      <p class="card-text">{{subMessage}}</p>
+      <div class="form-group col-sm-12 col-md-12 " style="position: fixed; bottom: 20px;">
+        <button (click)="goToLogin()" class="btn-danger" style="width: 80%;">
+          Back to Login
+        </button>
+      </div>
+    </div>
+  </div>

@@ -91,7 +91,7 @@ export class LoginComponent implements OnInit {
    * redirects to register page
    */
   redirectToRegister() {
-    // this.router.navigate(['register']);
+    this.router.navigate(['create-account']);
   }
 
   /**

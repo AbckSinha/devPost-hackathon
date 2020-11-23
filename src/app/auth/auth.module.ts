@@ -7,10 +7,14 @@ import { CommonDataComponent } from 'src/shared/components/common-data/common-da
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from 'src/shared/shared.module';
 import { HomeDashboardComponent } from './components/home-dashboard/home-dashboard.component';
+import { CreateAccountComponent } from './components/create-account/create-account.component';
+import { SuccessPageComponent } from './components/successpage/successpage.component';
 
 export const COMPONENTS = [
   LoginComponent,
-  HomeDashboardComponent
+  SuccessPageComponent,
+  HomeDashboardComponent,
+  CreateAccountComponent
 ];
 
 @NgModule({

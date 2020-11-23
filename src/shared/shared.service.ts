@@ -14,6 +14,11 @@ export class SharedService {
 
   public title = new BehaviorSubject('');
 
+  private messageSource = new BehaviorSubject('');
+  currentMessage = this.messageSource.asObservable();
+
+  private subMessageSource = new BehaviorSubject('');
+  currentSubMessage = this.subMessageSource.asObservable();
   private headerFlag = new BehaviorSubject('');
   headerCheckFlag = this.headerFlag.asObservable();
 
@@ -30,6 +35,16 @@ export class SharedService {
   // Function for setting up a title
   setTitle(title) {
     this.title.next(title);
+  }
+
+  // Function for change success message
+  changeMessage(message: string) {
+    this.messageSource.next(message);
+  }
+
+  // Function for change success sub message
+  changeSubMessage(message: string) {
+    this.subMessageSource.next(message);
   }
 
   // function to publish flag n successful login

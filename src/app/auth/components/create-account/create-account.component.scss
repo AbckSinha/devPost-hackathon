@@ -1,0 +1,46 @@
+@import '../../../../assets/scss/variable';
+
+.form-parent {
+  text-align: center;
+  padding: 0px;
+}
+#countryCode {
+  width: 45px;
+  float: left;
+  margin-left: 15px;
+  margin-right: 10px;
+  padding: 5px;
+  padding-left: 0;
+  z-index: 4;
+  background: transparent;
+}
+#telNo {
+  width: calc(100% - 55px);
+}
+.tel {
+  .has-float-label .form-control:placeholder-shown:not(:focus) + * {
+    left: 55px;
+  }
+}
+#input-mobileNumber {
+  display: inline-block;
+  width: 80%;
+  padding: 10px;
+}
+
+.terms {
+  color: $red-color;
+}
+
+.msg {
+  text-align: left;
+  color: $grey-color;
+}
+
+::placeholder {
+  color: $grey-color;
+}
+
+.left-err-msg {
+  position: absolute;
+}

@@ -18,7 +18,8 @@ export class CommonDataComponent implements OnInit {
   };
   yesNo = ['Yes', 'No'];
   countrycode = '+60';
-  passwordPattern = '^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&#]).{8,20}$';
+  // passwordPattern = '^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&#]).{8,20}$';
+  passwordPattern = '^[A-Za-z0-9 _(),\./\'\‘\’@*#+-]*$';
   userIdPattern = '^(?![0-9]*$)[a-zA-Z0-9]+$';
   userNamePattern = '^[A-Za-z0-9 _@\'\‘\’./]*[A-Za-z@\'\‘\’./]+[A-Za-z0-9 _@\'\‘\’./]*$';
   mobileNumberPattern = '^[0-9]+$';
@@ -37,19 +38,8 @@ export class CommonDataComponent implements OnInit {
   decimalPattern = '[0-9]+(\.[0-9][0-9]?)?';
 
   createAccountForm = {
-    title: 'CIMB Dealers Account',
+    title: 'Create Account',
     subTitle: 'Fill in your details.',
-    dealerNumber: {
-      label: 'Dealer Code',
-      requiredMsg: 'Dealer Code is required',
-      minLengthMsg: 'Dealer Code must be 10 characters long',
-      maxLengthMsg: 'Dealer Code must be 10 characters long',
-      patternMsg: 'Dealer Number must be alphanumeric'
-    },
-    dealershipName: {
-      label: 'Name of the Dealership',
-      requiredMsg: 'Dealership Name is required'
-    },
     mobileNumber: {
       label: 'Mobile Number',
       requiredMsg: 'Mobile Number is required',
